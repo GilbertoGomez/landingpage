@@ -5,6 +5,9 @@
   font-weight: normal;
   font-style: normal;
 }
+option {
+  font-size: 16px;
+}
 input,
 select,
 button {
@@ -16,6 +19,7 @@ body {
   max-width: 1366px;
   margin: 0 auto !important;
   float: none !important;
+  background: #000;
 }
 .especial {
   margin: 0;
@@ -108,51 +112,125 @@ footer {
   background: #000;
   height: 150px;
   text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
-.privado {
-  margin-left: 70px;
-  margin-right: 1px;
+footer .privado {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  margin-top: 1em;
+  width: 100%;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -o-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 70px;
 }
-.privado:after {
-  content: " | ";
-}
-.right {
-  float: right;
-  margin-right: 70px;
-  top: -40px;
-  position: relative;
-}
-.mail {
-  margin-right: 30px;
+footer .privado span {
+  font-size: 16px;
   color: #fff;
+  font-family: arial;
+}
+footer .redes span {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 28px;
+  color: #808080;
+  font-family: iconos;
+  padding: 10px;
+}
+footer .more {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -o-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 70px;
+}
+footer .more .web a {
+  font-size: 16px;
+  padding: 0.5em;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  color: #808080;
+}
+footer .more .web a:hover {
+  color: #337ab7;
+}
+footer .more span {
+  font-size: 16px;
+  color: #fff;
+  font-family: arial;
+}
+footer .tel a {
+  font-size: 16px;
+  padding: 0.5em;
   text-decoration: none;
-  margin-left: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #808080;
 }
-.mail:before {
-  padding: 10px;
+footer .tel a:hover {
+  color: #337ab7;
+}
+footer .tel a:before {
+  padding: 0.2em;
+  color: #808080;
   font-family: iconos;
-  content: "\e800";
+  content: '\e800';
 }
-.tel {
-  margin-right: 30px;
-  color: #fff;
+footer .tel span {
+  color: #808080;
+  font-size: 16px;
 }
-.tel:before {
-  padding: 10px;
+footer .tel span:before {
+  padding-left: 0.5em;
+  color: #808080;
   font-family: iconos;
-  content: "\e10d";
-}
-.copy {
-  margin: 0px 0px 10px 70px;
-  font-size: 15px;
-  color: #fff;
-  padding-top: 50px;
+  content: '\e10d';
 }
 .info {
   z-index: 9999;
   width: 420px;
   position: absolute;
-  left: 850px;
+  left: 65%;
   height: 650px;
   background: #000 none repeat scroll 0% 0%;
   text-align: center;
@@ -222,7 +300,15 @@ form {
   padding: 0;
   background-img: url("../imagenes/palma.jpg");
 }
-@media (max-width: 768px) {
+@media only screen and (max-width: 1200px) {
+  .uno span {
+    margin-left: 0.5em;
+  }
+  .dos span {
+    margin-left: 0.5em;
+  }
+}
+@media only screen and (max-width: 1100px) {
   .uno span {
     font-size: 25px;
   }
@@ -230,75 +316,144 @@ form {
     font-size: 25px;
   }
   .info {
-    left: 320px;
-    height: 420px;
+    left: 60%;
+    height: 600px;
+  }
+  .info .titulo {
+    font-size: 25px;
+  }
+  .info h3 {
+    font-size: 16px;
   }
 }
-@media (max-width: 980px) {
+@media only screen and (max-width: 950px) {
+  .form-group {
+    width: initial !important;
+    display: -webkit-box !important;
+    display: -moz-box !important;
+    display: -webkit-flex !important;
+    display: -ms-flexbox !important;
+    display: box !important;
+    display: flex !important;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -o-box-orient: vertical;
+    -webkit-flex-direction: column !important;
+    -ms-flex-direction: column !important;
+    flex-direction: column !important;
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    -o-box-lines: multiple;
+    -webkit-flex-wrap: wrap !important;
+    -ms-flex-wrap: wrap !important;
+    flex-wrap: wrap !important;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -o-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center !important;
+    align-items: center !important;
+  }
+  .form-group input,
+  .form-group select {
+    margin: 0.4em !important;
+    padding: 0.5em !important;
+    width: 80% !important;
+    font-size: 16px !important;
+  }
+  .form-group button {
+    font-size: 16px !important;
+    width: auto;
+  }
   .info {
-    left: 520px;
-    height: 420px;
+    height: 480px !important;
+    width: auto !important;
+    padding-top: 10px !important;
+    left: 65%;
+  }
+  .info form {
+    padding: 0px !important;
   }
 }
-@media (max-width: 800px) {
-  .info {
-    left: 350px;
-    height: 420px;
-  }
-}
-@media (max-width: 360px) {
-  .uno {
-    height: 110px;
-  }
-  .uno span {
+@media only screen and (max-width: 880px) {
+  .uno,
+  .dos {
     margin: 0;
-    font-size: 17px;
+    text-align: center;
   }
-  .dos span {
-    margin: 0;
-    font-size: 18px;
-  }
-  .dos h4 {
-    margin: 0;
-    font-size: 14px;
+  .img-responsive {
+    height: 500px;
+    max-width: 100%;
   }
   .info {
     left: 0px;
-    width: 330px;
+    height: 100% !important;
+    width: 100% !important;
   }
+}
+@media only screen and (max-width: 856px) {
+  .more {
+    display: block !important;
+    text-align: center !important;
+    margin-top: 1em;
+  }
+}
+@media only screen and (max-width: 560px) {
   footer {
-    height: 200px;
+    height: 210px;
   }
-  .copy {
-    padding-top: 10px;
-  }
-  .privado {
-    margin-right: 1px;
-    margin-left: 50px;
-  }
-  .right {
-    margin-right: 40px;
-    float: none;
-    top: 0;
-    position: initial;
-  }
-  .atencion {
+  footer .privado {
+    display: block !important;
     text-align: center;
   }
-  .mail {
+  footer .tel a {
+    display: block !important;
+  }
+  footer .tel span {
+    display: block !important;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .uno span,
+  .dos span {
+    font-size: 22px !important;
+  }
+  .uno h4,
+  .dos h4 {
+    margin: 0;
+  }
+  .center h2 {
+    font-size: 25px !important;
+  }
+}
+@media only screen and (max-width: 450px) {
+  footer {
+    height: 240px;
+  }
+  footer .more {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  footer .more .web span {
+    display: none;
+  }
+}
+@media only screen and (max-width: 390px) {
+  .center h2 {
+    font-size: 20px !important;
+  }
+  .uno span,
+  .dos span {
+    font-size: 20px !important;
+  }
+  .uno h4,
+  .dos h4 {
+    font-size: 18px !important;
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 795px) {
+  .navbar-right {
     margin-right: 0;
-    width: 100%;
-    display: inline-block;
-  }
-  .form-group {
-    width: 300px;
-  }
-  .titulo {
-    font-size: 35px;
-    margin-right: 40px;
-  }
-  .info h4 {
-    margin-right: 40px;
-    font-size: 16px;
   }
 }
