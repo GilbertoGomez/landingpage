@@ -1,14 +1,14 @@
 {
-  "name": "landing Page Demo",
+  "name": "landingPageDemo",
   "dependencies": {
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
     "gulp-minify-css": "^1.2.1",
     "jade": "^1.11.0",
-    "nib": "^1.1.0",
+    "nib": "^1.1.0"
   },
   "scripts": {
-    "jade": "jade --pretty lib/index.jade --out ./",
+    "jade": "jade lib/index.jade --out ./",
     "css": "stylus --use nib lib/index.styl --out ./lib/",
     "server": "http-server ."
   }
